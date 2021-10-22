@@ -24,12 +24,12 @@ class Director:
             self._roster = Roster()
 
     def start_game(self):
+
         self._prepare_game()
         while self._keep_playing:
             self._get_inputs()
             self._do_updates()
             self._do_outputs()
-        
 
 
     def _prepare_game(self):
@@ -47,19 +47,24 @@ class Director:
         """Gets the inputs at the beginning of each round of play. In this case,
         that means getting the move from the current player.
 
+
+
         Args:
             self (Director): An instance of Director.
         """
         # display the game board
+
         # get next player's move
         player = self._roster.get_current()
         self._console.write(f"{player.get_name()}'s turn:")
         guess = self._console.read_number("What is your guess? ")
         move = Move(guess)
         player.set_move(move)
+
         self._board.apply(move)
         board = self._board.to_string()
         self._console.write(board)
+
 
     def _do_updates(self):
         """Updates the important game information for each round of play. In 
@@ -69,12 +74,15 @@ class Director:
             self (Director): An instance of Director.
         """
         player = self._roster.get_current()
+
         move = player.get_move()
         
+
  
     def _do_outputs(self):
         """Outputs the important game information for each round of play. In 
         this case, that means checking if there are stones left and declaring the winner.
+
 
         Args:
             self (Director): An instance of Director.
@@ -93,3 +101,5 @@ class Director:
         #     print(f"\n{name} won!")
         #     self._keep_playing = False
         # self._roster.next_player()
+
+       
