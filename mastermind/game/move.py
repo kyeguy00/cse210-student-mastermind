@@ -7,25 +7,25 @@ class Move:
         _pile (integer): The pile to remove from.
         _stones (integer): The number of stones to remove.
     """
-    def __init__(self, stones, pile):
+    def __init__(self, apply, prepare,):
         """The class constructor.
         
         Args:
             self (Board): an instance of Board.
         """
-        self._pile = pile
-        self._stones = stones
+        self.apply = apply
+        self._prepare = prepare
 
-    def get_pile(self):
+    def get_apply(self):
         """Returns the pile to remove from.
         Args:
             self (Move): an instance of Move.
         """
-        return self._pile
+        return self.apply
 
-    def get_stones(self):
+    def get_random(self):
         """Returns the number of stones to remove.
         Args:
             self (Move): an instance of Move.
         """
-        return self._stones
+        return self._prepare
