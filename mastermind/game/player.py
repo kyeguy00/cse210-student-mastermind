@@ -18,7 +18,7 @@ class Player:
         self._result = "****"
         
         
-    def get_move(self):
+    def get_guess(self):
         """Returns the player's last move (an instance of Move). If the player 
         hasn't moved yet this method returns None.
         Args:
