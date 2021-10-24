@@ -45,18 +45,22 @@ class Player:
         """Gets the player's result and returns that result.
         Args:
             self (Player): an instance of Player.
+            
         """
         return(self._result)
 
 
     def set_result(self, code):
         """Generates a hint based on the given code and guess.
-        Args:
-            self (Board): An instance of Board.
-            code (string): The code to compare with.
-        Returns:
-            string: A hint in the form [xxxx]
-        """
+
+    Args:
+        self (Board): An instance of Board.
+        code (string): The code to compare with.
+        
+
+    Returns:
+        string: A hint in the form [xxxx]
+    """ 
         text = ""
         string_guess = str(self._move)
         for i, digit in enumerate(code):

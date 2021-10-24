@@ -103,11 +103,3 @@ class Director:
             self._keep_playing = False
         self._roster.next_player()
 
-        # if self._board.is_empty():
-        #     winner = self._roster.get_current()
-        #     name = winner.get_name()
-        #     print(f"\n{name} won!")
-        #     self._keep_playing = False
-        # self._roster.next_player()
-
-       
