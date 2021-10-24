@@ -6,7 +6,7 @@ class Move:
         _code (int): Code to be guessed.
     """
     def __init__(self, code):
-         """The class constructor.
+        """The class constructor.
         Args:
             self (Board): an instance of Board.
         """
